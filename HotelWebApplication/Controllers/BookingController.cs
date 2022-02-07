@@ -29,14 +29,9 @@ namespace HotelWebApplication.Controllers
 
         public async Task<IActionResult> AddBooking(string roomID, DateTime bookingDate, string staffID)
         {
-            var bookings = _context.Bookings.Where(x => x.RoomID == roomID).ToList();
-            foreach (var booking in bookings)
-            {
-                if(booking.BookingDate == bookingDate)
-                {
-                    ModelState.AddModelError(nameof(bookingDate), "There is already a booking on this date.");
-                }
-            }
+            var bookings = _context.Bookings.Where(x => x.RoomID == roomID && x.BookingDate == bookingDate);
+            if (bookings.Any())
+                ModelState.AddModelError(nameof(bookingDate), "There is already a booking on this date.");
 
             var newbooking = new Booking
             {
