@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{E0E5B6F5-7883-4AA0-BC2F-FE4C0335824E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HotelWebApplication/Data/DatabaseSeeder.cs">
+    <Files>
+      <File FileName="HotelWebApplication/Models/Room.cs" Line="6" Column="2" />
+      <File FileName="HotelWebApplication/Models/Booking.cs" Line="15" Column="23" />
+      <File FileName="HotelWebApplication/Models/Staff.cs" Line="30" Column="37" />
+      <File FileName="HotelWebApplication/Data/HotelContext.cs" Line="7" Column="39" />
+      <File FileName="HotelWebApplication/appsettings.json" Line="14" Column="1" />
+      <File FileName="HotelWebApplication/Program.cs" Line="2" Column="32" />
+      <File FileName="../WDT Material/s3812132-s3873256-a2/BankingWebApplication/Program.cs" Line="24" Column="2" />
+      <File FileName="../WDT Material/s3812132-s3873256-a2/BankingWebApplication/Data/BankingAppContext.cs" Line="26" Column="1" />
+      <File FileName="HotelWebApplication/appsettings.Development.json" Line="10" Column="1" />
+      <File FileName="HotelWebApplication/Data/DatabaseSeeder.cs" Line="52" Column="50" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HotelWebApplication" expanded="True">
+            <Node name="HotelWebApplication" expanded="True">
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.HotelWebApplication PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

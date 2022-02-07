@@ -1,9 +1,39 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using HotelWebApplication.Models;
+using HotelWebApplication.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Hosting;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllersWithViews();
 
+// Add services to the container.
+builder.Services.AddDbContext<HotelContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HotelDetails"));
+
+    // Enable lazy loading.
+    options.UseLazyLoadingProxies();
+});
+
+builder.Services.AddDistributedMemoryCache();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        DatabaseSeeder.Initialise(services);
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred seeding the DB.");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

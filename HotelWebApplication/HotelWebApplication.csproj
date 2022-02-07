@@ -14,6 +14,7 @@
     <None Remove="X.PagedList.Mvc" />
     <None Remove="X.PagedList" />
     <None Remove="X.PagedList.Mvc.Core" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.1" />
@@ -25,5 +26,8 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
     <PackageReference Include="X.PagedList" Version="8.1.0" />
     <PackageReference Include="X.PagedList.Mvc.Core" Version="8.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>
