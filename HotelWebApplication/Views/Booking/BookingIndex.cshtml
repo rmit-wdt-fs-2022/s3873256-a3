@@ -1,0 +1,48 @@
+﻿@model HotelWebApplication.Models.Booking
+@{
+    ViewData["Title"] = "BookingIndex";
+    var Rooms = ViewBag.Rooms;
+    var Staffs = ViewBag.Staffs;
+}
+
+<h1 class="display-4">Add staff</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Booking" asp-action="AddStaff">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="margin-top:40px;">
+                <label for="PayeeID" class="control-label">Room ID</label></br>
+                <select name="RoomID" id="RoomID">
+                    @foreach (var room in ViewBag.Rooms)
+                    {
+                        <option value="@room.RoomID">@room.RoomID</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group" style="margin-top:40px;">
+                <label for="StaffID" class="control-label">Staff ID</label></br>
+                <select name="StaffID" id="StaffID">
+                    @foreach (var staff in ViewBag.Staffs)
+                    {
+                        <option value="@staff.StaffID">@staff.StaffID</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="AddStaff" class="btn btn-primary" style="margin-top:10px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Staff" asp-action="Staff">Back to Staff List</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+
+
+

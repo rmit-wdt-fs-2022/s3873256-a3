@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Booking>
+<style>
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+        background-color: #81629d !important;
+    }
+</style>
+<h3> This is the list of our trusted staff members </h3>
+<table class="table" style="margin-top:80px;">
+    <tr>
+        <th>@Html.DisplayNameFor(x => x.First().RoomID)</th>
+        <th>@Html.DisplayNameFor(x => x.First().BookingDate)</th>
+        <th>@Html.DisplayNameFor(x => x.First().StaffID)</th>
+        <th></th>
+    </tr>
+    @foreach (var booking in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(x => booking.RoomID)</td>
+            <td>@Html.DisplayFor(x => booking.BookingDate)</td>
+            <td>@Html.DisplayFor(x => booking.StaffID)</td>
+        </tr>
+    }
+</table>
+

@@ -1,10 +1,19 @@
 ﻿using HotelWebApplication.Models;
+using Microsoft.Extensions.Options;
+using System.Net.Http.Headers;
 using HotelWebApplication.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHttpClient(Options.DefaultName, client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5120");
+    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+});
 
 builder.Services.AddControllersWithViews();
 

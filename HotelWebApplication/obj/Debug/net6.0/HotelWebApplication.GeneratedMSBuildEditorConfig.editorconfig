@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/dev/s3873256-a3/HotelWebApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/dev/s3873256-a3/HotelWebApplication/Views/Api/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXBpL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dev/s3873256-a3/HotelWebApplication/Views/Booking/BookingIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9Cb29raW5nSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/dev/s3873256-a3/HotelWebApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

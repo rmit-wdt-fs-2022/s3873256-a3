@@ -17,6 +17,9 @@
     <None Remove="Views\Staff\" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Microsoft.Data.SqlClient" />
+    <None Remove="Views\Booking\" />
+    <None Remove="Controllers\Api\" />
+    <None Remove="Views\ApiViews\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.1" />
@@ -35,6 +38,9 @@
     <Folder Include="Data\" />
     <Folder Include="wwwroot\Images\" />
     <Folder Include="Views\Staff\" />
+    <Folder Include="Views\Booking\" />
+    <Folder Include="Controllers\Api\" />
+    <Folder Include="Views\ApiViews\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Images\" />
