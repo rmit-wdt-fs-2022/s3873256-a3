@@ -18,7 +18,7 @@ namespace HotelWebApplication.Controllers
 
         public async Task<IActionResult> Staff()
         {
-            var staff = _context.Staffs;
+            var staff = _context.Staffs.ToList();
             return View(staff);
         }
 
@@ -27,7 +27,8 @@ namespace HotelWebApplication.Controllers
             return View();
         }
 
-        public async Task<IActionResult> StaffAdd(string staffID, string firstname, string lastname, string email, string phone)
+        [HttpPost]
+        public async Task<IActionResult> AddStaff(string staffID, string firstname, string lastname, string email, string? mobilephone)
         {
             var staff = new Staff
             {
@@ -35,7 +36,7 @@ namespace HotelWebApplication.Controllers
                 FirstName = firstname,
                 LastName = lastname,
                 Email = email,
-                MobilePhone = phone
+                MobilePhone = mobilephone
             };
 
             _context.Staffs.Add(staff);

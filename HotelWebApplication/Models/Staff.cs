@@ -30,7 +30,8 @@ namespace HotelWebApplication.Models
 		[RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", ErrorMessage = "Not a valid Email address")]
         public string Email { get; set; }
 
-		[StringLength(10, MinimumLength = 0, ErrorMessage = "Mobile Number must be 10 characters long")]
+		
+		[StringLength(10, MinimumLength = 10, ErrorMessage = "Mobile Number must be 10 characters long")]
 		[Display(Name = "Phone Number")]
 		[RegularExpression(@"^(04\d{8})", ErrorMessage = "Not a valid Mobile Number")]
         public string? MobilePhone { get; set; }

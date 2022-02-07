@@ -12,7 +12,7 @@ namespace HotelWebApplication.Models
 		[RegularExpression(@"\b\d{2}\.\d{2}\.\d{2}\b", ErrorMessage = "Not a valid Room ID.")]
 		[ForeignKey("RoomNumber")]
 		public string RoomID { get; set; }
-		public virtual Room? RoomNumber { get; set; }
+		public virtual Room RoomNumber { get; set; }
 
 		[Required]
 		[Key]
@@ -23,7 +23,7 @@ namespace HotelWebApplication.Models
 		[RegularExpression(@"\b\e{1}\d{5}\b", ErrorMessage = "Not a valid Staff ID.")]
 		[ForeignKey("StaffNumber")]
         public string StaffID { get; set; }
-		public virtual Staff? StaffNumber { get; set; }
+		public virtual Staff StaffNumber { get; set; }
 
 
 	}

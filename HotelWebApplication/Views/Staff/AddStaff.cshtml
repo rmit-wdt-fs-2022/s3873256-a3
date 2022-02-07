@@ -1,6 +1,6 @@
-﻿@model Staff
+﻿@model HotelWebApplication.Models.Staff
 @{
-    ViewData["Title"] = "StaffAdd";
+    ViewData["Title"] = "AddStaff";
 }
 
 <h1 class="display-4">Add staff</h1>
@@ -11,48 +11,43 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label for="StaffID" class="control-label">Staff ID</label>
-                <input id="StaffID" name="StaffID" class="form-control" value="@ViewBag.StaffID?.ToString()"
-                       data-val="true"
-                       data-val-required="The Staff ID field is required." />
-                @Html.ValidationMessage("Amount", new { @class = "text-danger" })
+                <input asp-for="StaffID" name="StaffID" class="form-control"/>
+                @*@Html.ValidationMessage("StaffID", new { @class = "text-danger" })*@
+                <span asp-validation-for="StaffID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="FirstName" class="control-label">First Name</label>
-                <input id="FirstName" name="FirstName" class="form-control" value="@ViewBag.FirstName?.ToString()"
-                       data-val="true"
-                       data-val-required="The First Name field is required" />
-                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+                <input asp-for="FirstName" name="FirstName" class="form-control"/>
+                @*@Html.ValidationMessage("FirstName", new { @class = "text-danger" })*@
+                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="LastName" class="control-label">Last Name</label>
-                <input id="LastName" name="LastName" class="form-control" value="@ViewBag.LastName?.ToString()"
-                       data-val="true"
-                       data-val-required="The Last Name field is required" />
-                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+                <input asp-for="LastName" name="LastName" class="form-control" />
+                @*@Html.ValidationMessage("LastName", new { @class = "text-danger" })*@
+                <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="Email" class="control-label">Email</label>
-                <input id="Email" name="Email" class="form-control" value="@ViewBag.Email?.ToString()"
-                       data-val="true"
-                       data-val-required="The Email field is required" />
-                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+                <input asp-for="Email" name="Email" class="form-control" />
+                @*@Html.ValidationMessage("Email", new { @class = "text-danger" })*@
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="MobilePhone" class="control-label">Phone Number</label>
-                <input id="MobilePhone" name="MobilePhone" class="form-control" value="@ViewBag.MobilePhone?.ToString()"
-                       data-val="true"
-                        />
-                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+                <input asp-for="MobilePhone" name="MobilePhone" class="form-control"/>
+                @*@Html.ValidationMessage("MobilePhone", new { @class = "text-danger" })*@
+                <span asp-validation-for="MobilePhone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Add Staff" class="btn btn-primary" style="margin-top:10px;" />
+                <input type="submit" value="AddStaff" class="btn btn-primary" style="margin-top:10px;" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-controller="Customer" asp-action="Index">Back to Accounts</a>
+    <a asp-controller="Staff" asp-action="Staff">Back to Staff List</a>
 </div>
 
 @section Scripts {
