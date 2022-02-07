@@ -30,6 +30,8 @@ namespace HotelWebApplication.Controllers
         [HttpPost]
         public async Task<IActionResult> AddStaff(string staffID, string firstname, string lastname, string email, string? mobilephone)
         {
+
+            
             var staff = new Staff
             {
                 StaffID = staffID,
