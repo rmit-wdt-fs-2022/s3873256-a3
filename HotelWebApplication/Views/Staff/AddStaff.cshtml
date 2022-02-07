@@ -1,0 +1,61 @@
+﻿@model Staff
+@{
+    ViewData["Title"] = "StaffAdd";
+}
+
+<h1 class="display-4">Add staff</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Staff" asp-action="AddStaff">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label for="StaffID" class="control-label">Staff ID</label>
+                <input id="StaffID" name="StaffID" class="form-control" value="@ViewBag.StaffID?.ToString()"
+                       data-val="true"
+                       data-val-required="The Staff ID field is required." />
+                @Html.ValidationMessage("Amount", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="FirstName" class="control-label">First Name</label>
+                <input id="FirstName" name="FirstName" class="form-control" value="@ViewBag.FirstName?.ToString()"
+                       data-val="true"
+                       data-val-required="The First Name field is required" />
+                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="LastName" class="control-label">Last Name</label>
+                <input id="LastName" name="LastName" class="form-control" value="@ViewBag.LastName?.ToString()"
+                       data-val="true"
+                       data-val-required="The Last Name field is required" />
+                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="Email" class="control-label">Email</label>
+                <input id="Email" name="Email" class="form-control" value="@ViewBag.Email?.ToString()"
+                       data-val="true"
+                       data-val-required="The Email field is required" />
+                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label for="MobilePhone" class="control-label">Phone Number</label>
+                <input id="MobilePhone" name="MobilePhone" class="form-control" value="@ViewBag.MobilePhone?.ToString()"
+                       data-val="true"
+                        />
+                @Html.ValidationMessage("Comment", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Staff" class="btn btn-primary" style="margin-top:10px;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Customer" asp-action="Index">Back to Accounts</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
+

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qEWlQe+6gMDu+b9V4lSBNDH/P4YulGfzVic778OrPx4=",
+  "Hash": "n/i7NN8vCPX1O9JA8t1Z9n8iOvUtzrQIB77/lOxia5w=",
   "Source": "HotelWebApplication",
   "BasePath": "_content/HotelWebApplication",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/dev/s3873256-a3/HotelWebApplication/wwwroot/Images/.DS_Store",
+      "SourceId": "HotelWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dev/s3873256-a3/HotelWebApplication/wwwroot/",
+      "BasePath": "_content/HotelWebApplication",
+      "RelativePath": "Images/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/.DS_Store"
+    },
+    {
+      "Identity": "/Users/dev/s3873256-a3/HotelWebApplication/wwwroot/Images/Hotel.png",
+      "SourceId": "HotelWebApplication",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dev/s3873256-a3/HotelWebApplication/wwwroot/",
+      "BasePath": "_content/HotelWebApplication",
+      "RelativePath": "Images/Hotel.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/Hotel.png"
     },
     {
       "Identity": "/Users/dev/s3873256-a3/HotelWebApplication/wwwroot/js/site.js",

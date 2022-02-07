@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Staff>
+
+<style>
+    .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+        background-color: #81629d !important;
+    }
+</style>
+<h3> This is the list of our trusted staff members </h3>
+<table class="table" style="margin-top:80px;">
+    <tr>
+        <th>@Html.DisplayNameFor(x => x.First().StaffID)</th>
+        <th>@Html.DisplayNameFor(x => x.First().FirstName)</th>
+        <th>@Html.DisplayNameFor(x => x.First().LastName)</th>
+        <th>@Html.DisplayNameFor(x => x.First().Email)</th>
+        <th>@Html.DisplayNameFor(x => x.First().MobilePhone)</th>
+        <th></th>
+    </tr>
+    @foreach (var staff in Model)
+    {
+<tr>
+    <td>@Html.DisplayFor(x => staff.StaffID)</td>
+    <td>@Html.DisplayFor(x => staff.FirstName)</td>
+    <td>@Html.DisplayFor(x => staff.LastName)</td>
+    <td>@Html.DisplayFor(x => staff.Email)</td>
+    <td>@Html.DisplayFor(x => staff.MobilePhone)</td>
+</tr>
+    }
+</table>
+

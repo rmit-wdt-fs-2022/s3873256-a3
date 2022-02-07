@@ -8,16 +8,19 @@ namespace HotelWebApplication.Models
 	{
 		[Required]
 		[Key]
+		[Display(Name = "Staff ID")]
 		[StringLength(6, MinimumLength = 6, ErrorMessage = "Staff ID must be 6 characters long")]
 		[RegularExpression(@"\b\e{1}\d{5}\b", ErrorMessage = "Not a valid Staff ID.")]
         public string StaffID { get; set; }
 
 		[Required]
+		[Display(Name = "First Name")]
 		[StringLength(30, MinimumLength = 2, ErrorMessage = "Name must be between 2 to 30 characters long.")]
 		[RegularExpression(@"\b([A-Z]{1}[a-z]{0,29})", ErrorMessage = "Not a valid Name")]
         public string FirstName { get; set; }
 
 		[Required]
+		[Display(Name = "Last Name")]
 		[StringLength(30, MinimumLength = 2, ErrorMessage = "Name must be between 2 to 30 characters long.")]
 		[RegularExpression(@"\b([A-Z]{1}[a-z]{0,29})", ErrorMessage = "Not a valid Name")]
 		public string LastName { get; set; }
@@ -28,6 +31,7 @@ namespace HotelWebApplication.Models
         public string Email { get; set; }
 
 		[StringLength(10, MinimumLength = 0, ErrorMessage = "Mobile Number must be 10 characters long")]
+		[Display(Name = "Phone Number")]
 		[RegularExpression(@"^(04\d{8})", ErrorMessage = "Not a valid Mobile Number")]
         public string? MobilePhone { get; set; }
 
