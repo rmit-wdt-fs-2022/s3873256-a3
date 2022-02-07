@@ -294,3 +294,4 @@
 /Users/dev/s3873256-a3/HotelWebApplication/obj/Debug/net6.0/ref/HotelWebApplication.dll
 /Users/dev/s3873256-a3/HotelWebApplication/obj/Debug/net6.0/HotelWebApplication.pdb
 /Users/dev/s3873256-a3/HotelWebApplication/obj/Debug/net6.0/HotelWebApplication.genruntimeconfig.cache
+/Users/dev/s3873256-a3/HotelWebApplication/obj/Debug/net6.0/HotelWebApplication.csproj.AssemblyReference.cache
